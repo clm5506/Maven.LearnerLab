@@ -10,12 +10,11 @@ public class Students extends People {
     private Student charlie = new Student(3L);
     private Student davis = new Student(4L);
 
-    Student[] yungStuds = new Student[]{marci,brian,charlie,davis};
+    Student[] yungStuds = new Student[]{ marci,brian,charlie,davis };
 
     private static final Students INSTANCE = new Students();
 
     private Students(){
-        super();
         for(Student s : yungStuds) {
             super.add(s);
         }
@@ -24,4 +23,8 @@ public class Students extends People {
     public static Students getInstance(){
         return INSTANCE;
     }
+
+//    public Student[] getArray(){
+//        return yungStuds;
+//    }
 }

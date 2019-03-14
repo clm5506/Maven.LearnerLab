@@ -15,7 +15,6 @@ public class Instructors extends People{
     private static final Instructors INSTANCE = new Instructors();
 
     private Instructors() {
-        super();
         for(Instructor i : teachers)
         super.add(i);
     }

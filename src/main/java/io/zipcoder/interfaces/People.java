@@ -43,7 +43,7 @@ public class People {
 
     public Person[] getArray(){
 
-        Person[] answer = this.personList.toArray(new Person[personList.size()]);
+        Person[] answer = this.personList.toArray(new Person[0]);
         return answer;
     }
 

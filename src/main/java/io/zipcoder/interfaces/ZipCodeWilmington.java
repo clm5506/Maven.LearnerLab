@@ -10,7 +10,7 @@ public class ZipCodeWilmington {
     private ZipCodeWilmington(){
     }
 
-    public ZipCodeWilmington getInstance(){
+    public static ZipCodeWilmington getInstance(){
         return INSTANCE;
     }
 
