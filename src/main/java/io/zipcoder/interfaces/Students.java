@@ -3,12 +3,12 @@ package io.zipcoder.interfaces;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Students extends People {
+public final class Students extends People<Student> {
 
-    private Student marci = new Student(1L);
-    private Student brian = new Student(2L);
-    private Student charlie = new Student(3L);
-    private Student davis = new Student(4L);
+    private Student marci = new Student(1L, "Marci");
+    private Student brian = new Student(2L, "Brian");
+    private Student charlie = new Student(3L, "Charlie");
+    private Student davis = new Student(4L, "Davis");
 
     Student[] yungStuds = new Student[]{ marci,brian,charlie,davis };
 
@@ -24,7 +24,8 @@ public class Students extends People {
         return INSTANCE;
     }
 
-//    public Student[] getArray(){
-//        return yungStuds;
-//    }
+    @Override
+   public Student[] getArray(){
+        return yungStuds;
+    }
 }

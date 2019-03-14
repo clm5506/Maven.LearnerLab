@@ -9,7 +9,7 @@ public class TestPerson {
     public void testConstructor(){
         //Given
         Long id = 1L;
-        Person person = new Person(id);
+        Person person = new Person(id,"");
 
         //Then
         Assert.assertEquals(id, person.getId());
@@ -19,7 +19,7 @@ public class TestPerson {
     public void testSetName(){
         //Given
         Long id = 2L;
-        Person person = new Person(id);
+        Person person = new Person(id,"");
         String expectedName = "Cristina";
 
         //When

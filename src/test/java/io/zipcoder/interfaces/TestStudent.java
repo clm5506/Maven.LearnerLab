@@ -8,17 +8,18 @@ public class TestStudent {
     @Test
     public void testImplementation(){
         //Given
-        Student student = new Student(1L);
+        Student student = new Student(1L,"test");
 
         //When
         Assert.assertTrue(student instanceof Learner);
+
     }
 
     @Test
     public void testInheritance(){
 
         //Given
-        Student student = new Student(2L);
+        Student student = new Student(2L,"test2");
 
         //When
         Assert.assertTrue(student instanceof Person);
@@ -27,7 +28,7 @@ public class TestStudent {
     @Test
     public void testLearn(){
         //Given
-        Student student = new Student(3L);
+        Student student = new Student(3L,"test");
         double before = student.getTotalStudyTime();
 
         //When
@@ -40,7 +41,7 @@ public class TestStudent {
     @Test
     public void testLearn2(){
         //Given
-        Student student = new Student(3L);
+        Student student = new Student(3L,"test");
         double before = student.getTotalStudyTime();
 
         //When

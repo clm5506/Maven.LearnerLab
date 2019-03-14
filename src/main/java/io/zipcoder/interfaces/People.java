@@ -4,46 +4,44 @@ import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class People {
+public abstract class People<E extends Person>{
 
-    List<Person> personList;
+    List<E> personList;
 
     public People() {
-        this.personList = new ArrayList<Person>();
+        this.personList = new ArrayList<E>();
     }
 
-    public void add(Person person){
-        this.personList.add(person);
+    public void add(E e){
+        this.personList.add(e);
     }
 
-    public Person findById(Long id){
-        for(Person p : personList){
-            if(p.getId() == id){
-               return p;
+    public E findById(Long id){
+        for(E e : personList){
+            if(e.getId() == id){
+               return e;
             }
         } throw new InvalidParameterException();
 
     }
 
-    public void remove(Person person){
-        this.personList.remove(person);
+    public void remove(E e){
+        this.personList.remove(e);
     }
 
     public void remove(Long id){
-        for(Person p : personList){
-            if(p.getId() == id){
-                personList.remove(p);
-            }
-        }
+
+        personList.remove(findById(id));
+
     }
 
     public int getCount(){
         return this.personList.size();
     }
 
-    public Person[] getArray(){
+    public E[] getArray(){
 
-        Person[] answer = this.personList.toArray(new Person[0]);
+        E[] answer = (E[]) this.personList.toArray(new Person[0]);
         return answer;
     }
 

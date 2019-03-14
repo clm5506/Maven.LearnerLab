@@ -3,30 +3,12 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestInstructor {
-
-    @Test
-    public void testImplementation(){
-        //Given
-        Instructor newInstructor = new Instructor(2L,"test");
-
-        //Then
-        Assert.assertTrue(newInstructor instanceof Teacher);
-    }
-
-    @Test
-    public void testInheritance(){
-        //Given
-        Instructor newInstructor = new Instructor(2L,"test");
-
-        //Then
-        Assert.assertTrue(newInstructor instanceof Person);
-    }
+public class TestEducator {
 
     @Test
     public void testTeach(){
         //Given
-        Instructor newInstructor = new Instructor(4L,"test");
+        Educator newInstructor = Educator.valueOf("LEON");
         Student newStudent = new Student(3L,"test");
         double before = newStudent.getTotalStudyTime();
         double expected = before + 3;
@@ -42,7 +24,7 @@ public class TestInstructor {
     @Test
     public void testLecture(){
         //Given
-        Instructor newInstructor = new Instructor(4L,"test");
+        Educator newInstructor = Educator.valueOf("DOLIO");
         Student firstStudent = new Student(3L,"test");
         Student secondStudent = new Student(4L,"test");
         //add before
